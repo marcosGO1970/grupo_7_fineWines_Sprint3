@@ -1,0 +1,372 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+p{
+    font-size: 12px;
+}
+
+header{
+    background-color:  #FFF;
+    /*display: flex;*/
+}
+
+.top-header{
+    padding: 5%;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+
+#logo{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+}
+/*------------ form buscar----------------*/
+header .form {
+    width: 65%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+header .form input{
+    border-radius: 8px 0 0 8px;
+    border: solid 1px black;
+    border-right: none;
+    height: 25px;
+    width: 130px
+}
+header .form button{
+    border-radius: 0 8px 8px 0;
+    border: solid 1px black;
+    border-left: none;
+    height: 25px;
+    background-color: #FFF;
+}
+i.fa.fa-search{
+    margin: auto;
+}
+#buscador{
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px;
+    flex-grow: 0.4;
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputBuscador{
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px;
+    width: 70%;
+    outline: none;
+    color: #666;
+}
+
+#submit{
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    background-color: #FFF;
+    width: 12%;
+}
+
+div.burger-menu{
+    text-align: center;
+    margin: auto;
+    padding: 0px 0px 20px 0px;
+    width: 40px;
+    height: 40px;
+}
+
+div.burger-menu i{
+    background-color:  #F5F5F5;
+    border-radius: 5px;
+    color:#000;
+    font-size: 10px;
+    padding: 10px;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.clase-iconos-header{
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    display: none;
+}
+
+header div i{
+    padding: 5px;
+}
+
+header nav{
+
+    font-size: 12px;
+    display: none;
+    border-color: black;
+    background-color: black;
+ 
+}
+
+header nav ul{
+    display:flex;
+    flex:wrap;
+    justify-content: space-around;
+    align-items: center;
+    height:7vh;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+section.banner div{
+    width: 100%;
+    position: relative;
+}
+
+section.banner div p{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 12px;
+    top: 40%;
+}
+
+section.banner div img{
+    width: 100%;
+}
+
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.last-visit{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.last-visit div span,
+.offers div span{
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+
+h3{
+    color: #666;
+}
+
+.products{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo{
+    background-color: #FFF;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 800ms;
+}
+
+.product_img{
+    max-height: 200px;
+}
+
+.detalle{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.price-and-discount{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.price{
+    font-size: 16px;
+    width: 28%;
+    margin-top: 5px;
+}
+
+.discount{
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.bodega{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.varietal{
+    font-size: 12px;
+    font-weight: normal
+}  
+
+article div.detalle h4, i{
+    margin-top: 10px;
+    display: none;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+    width: 45%;
+}
+
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   text-align: center;
+   background-color: black;
+}
+
+footer section i{   
+    margin-top: 10px;
+    background-color: white;
+}
+
+footer section h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+footer section p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    margin-bottom:15px;
+}
+
+.ocultar-mobile{
+    display:none
+}
+
+
+@media (max-width: 480px){
+  
+    .articulo{
+        width: 80%;
+        margin-bottom: 5px;
+       }
+}
+
+@media (min-width: 480px){
+  
+    section.banner div p{
+        font-size: 20PX;
+    }
+    
+    main section div article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    /*---- Form buscar --------*/ 
+    header .form input{
+        height: 30px;
+        width: 200px
+    }
+    header .form button{
+        height: 30px;
+    }
+    article div.detalle h4{
+        display: block;
+    }
+
+    div.burger-menu{
+        display: none;
+    }
+
+    header nav{
+        display: block;  
+    }
+
+    .clase-iconos-header{
+        display: block;
+    }
+
+   .products{
+       display:flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       align-items: center;
+   }
+
+   .articulo{
+    width: 45%;
+    margin-bottom: 5px;
+   }
+
+   .articulo:hover {
+    transform: scale(1.2);
+    }
+
+    .ocultar-mobile{
+        display: block;
+    }
+}
+
+@media (min-width: 960px){
+    
+    section.banner div p{
+        font-size: 24PX;
+    }
+    .articulo{
+        width: 21%;
+       }
+    }
