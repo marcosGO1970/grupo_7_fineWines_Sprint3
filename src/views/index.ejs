@@ -60,63 +60,22 @@
             <span>Basado en tu última visita</span>
             </div>
             <div class="products">
-                <article class="articulo"><a href="/productDetail">
-                    <img src="/images/Angelica Zapata Malbec Alta X 750cc. (full).jpg" class="product_img" alt="Angelica Zapata Malbec">
-                </a><div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$2.500</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                        
-                            <div>
-                                <h4 class="bodega">Angelica Zapata</h4>
-                                <h5 class="varietal">Malbec</h5>
+                <% products.forEach(product => {%>
+                    <article class="articulo">
+                        <a href="/productDetail/<%= product.id %>"><img src="/images/<%= product.image %>" class="product_img" alt="Angelica Zapata Malbec"></a>
+                        <div class="detalle">
+                            <div class="price-and-discount">
+                                <p class="price"><%= product.price %>"</p>
+                                <p class="discount"><%= product.descuento %>"</p>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/Cara Sur Rosado - Sebastian Zuccardi - Vino Barreal San Juan.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$1.800</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
+                                <div>
+                                    <h4 class="bodega"><%= product.bodega %>"</h4>
+                                    <h5 class="varietal"><%= product.varietal %>"</h5>
+                                </div>
                         </div>
-                            <div>
-                                <h4 class="bodega">Sebastian Zuccardi</h4>
-                                <h5 class="varietal">Cara Sur Rosado</h5>
-                            </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/Champagne Salentein Espumante Brut Rose 750cc.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$1.600</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                            <div>
-                                <h4 class="bodega">Salentein</h4>
-                                <h5 class="varietal">Espumante Brut Rose</h5>
-                            </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/DV-CATENA-CABERNET SUAVIGNON-MALBEC.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$1.600</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                            <div>
-                                <h4 class="bodega">DV Catena</h4>
-                                <h5 class="varietal">Cabernet Malbec</h5>
-                            </div>
-                    </div>
-                </article>
+                    </article>
+                <%}) %>
             </div>
                   
         </section>
@@ -191,21 +150,6 @@
     </footer>
 </body>
 <footer>
-    <section>
-        <h2>INSTITUCIONAL</h2>
-       <p>¿Quienes somos?</p>
-    </section>
-    <section class="ocultar-mobile">
-        <h2>PRODUCTOS</h2>
-       <p>Bodegas<br>Categorías</p>
-    </section>
-    <section>
-        <h2>CONTACTOS</h2>
-       <p>Whatsapp: 1165104040<br>Email: ventas@finwines.com</p>
-    </section> 
-    <section>
-        <h2>SEGUINOS</h2>
-        <i class="fa-brands fa-instagram"></i>
-    </section>
+    <%- include('./partials/footer.ejs') %>
 </footer>
 </html>

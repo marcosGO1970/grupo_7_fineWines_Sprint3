@@ -65,14 +65,14 @@
         <section class="last-visit">
             <h3>Bressia Piel Negra Pinot Noir 750</h3>
             <div class="products">
+                
                 <article>
-                    
                     <div class="imagen">
-                        <img class="zoom"src="/images/vinoPrueba.jpg" class="product_img" width="250px" alt="vino bressia">
+                        <img class="zoom"src="/images/<%= product.image %> " class="product_img" width="250px" alt="vino bressia">
                     </div>
                     <div class="main-article">
                          <div class="description1">
-                            <p class="description2">Bressia Piel Negra Pinot permanece 8 meses en barricas nuevas de roble francés, lo que le da el color rojo profundo muy intenso con matices negros de gran atractivo y vivacidad. En cuanto al olfato cuenta con notas de cerezas rojas, moras, tomare maduro y aromas frutales y florales como pétalos de rosas y violetas. En boca se puede apreciar que es un vino de gran estructura, se ofrece muy elegante, voluminoso y con una textura adecuada.</p>
+                            <p class="description2"><%= product.description %> </p>
                         </div>
                     </div>
                     
@@ -81,10 +81,8 @@
                 <div class="tipo-vino">
                     <div class="tipo-vino1">
                        <ul class="lista-vino">
-                        <li class="detalle-lista">TIPO: Tinto</li>
-                        <li class="detalle-lista">VARIEDAD: Pinot Noir</li>
-                        <li class="detalle-lista">CORTE: 100% Pinot Noir</li>
-                        <li class="detalle-lista">ORIGEN: Argentina</li>
+                        <li class="detalle-lista"><%= product.varietal %></li>
+                        <li class="detalle-lista"><%= product.bodega %></li>
                        </ul>
                     </div>
                     <div class="miscelanea">
@@ -95,8 +93,8 @@
                 <article>
                     <div class="caja-carrito">
                         <div class="precio-descuento">
-                            <p class="precio">$6.770</p>
-                            <p class="descuento">40% OFF</p>
+                            <p class="precio">$ <%= product.price %></p>
+                            <p class="descuento"><%= product.descuento*100 %> % OFF</p>
                         </div>
                         <div class="carrito">
                             <label class="cantidad">Cantidad:</label>
@@ -110,6 +108,7 @@
                         </div>
                         </div>
                     </article>
+                  
             </div>  
                     
         </section>
@@ -117,22 +116,7 @@
     </main>
 
     <footer>
-        <section class="footer-top">
-            <h2>INSTITUCIONAL</h2>
-           <p>¿Quienes somos?</p>
-        </section>
-        <section class="ocultar-mobile">
-            <h2>PRODUCTOS</h2>
-           <p>Bodegas<br>Categorías</p>
-        </section>
-        <section>
-            <h2>CONTACTOS</h2>
-           <p>Whatsapp: 1165104040<br>Email: ventas@finwines.com</p>
-        </section> 
-        <section>
-            <h2>SEGUINOS</h2>
-            <i class="fa-brands fa-instagram"></i>
-        </section>
+        <%- include('./partials/footer.ejs') %>
     </footer>
 </body>
 </html>

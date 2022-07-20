@@ -1,13 +1,13 @@
 //const path = require('path');
 //Fuentes de datos
-const platos = require ('../dataBase/platos.js')
+const products = require ('../dataBase/products.js')
 
 
 //Objeto literal mainController
 //Viene de mainRouter a cada modulo
 const mainController = {
     index: (req,res) => {
-        res.render('index');
+        res.render('index', {products});
     },
     productCart: (req,res) => {
         res.render('productCart');
@@ -19,9 +19,11 @@ const mainController = {
         res.render('../views/users/register.ejs');
     },
     productDetail: (req,res) => {
-        res.render('productDetail');
-    },
-    
+        const id = Number(req.params.id);
+        const product = products.find( product => product.id === id);
+
+        res.render('productDetail', {product});
+    }
 }
 
 module.exports = mainController
