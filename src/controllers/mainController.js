@@ -13,10 +13,10 @@ const mainController = {
         res.render('productCart');
     },
     login: (req, res) => {
-        res.render('../views/users/login.ejs');
+        res.render('users/login.ejs');
     },
     register:(req, res) => {
-        res.render('../views/users/register.ejs');
+        res.render('users/register.ejs');
     },
     productDetail: (req,res) => {
         const id = Number(req.params.id);
