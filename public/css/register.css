@@ -34,7 +34,29 @@ header{
     padding-bottom: 10px;
     width: 100px;
 }
-
+/*------------ form buscar----------------*/
+header .form {
+    width: 65%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+header .form input{
+    border-radius: 8px 0 0 8px;
+    border: solid 1px black;
+    border-right: none;
+    height: 25px;
+    width: 130px
+}
+header .form button{
+    border-radius: 0 8px 8px 0;
+    border: solid 1px black;
+    border-left: none;
+    height: 25px;
+    background-color: #FFF;
+}
 
 div.burger-menu{
     text-align: center;
@@ -78,7 +100,7 @@ header nav ul{
     justify-content: space-around;
     align-items: center;
     height: 35px;
-    height:7vh;
+    height:4.5em;
 }
 
 header ul li{
@@ -130,8 +152,12 @@ footer{
     justify-content: space-around;
    text-align: center;
    background-color: black;
+   
 }
-
+footer .fa-instagram:before {
+    background-color: black;
+    color: white;
+  }
 footer section i{   
     margin-top: 10px;
     background-color: white;
@@ -293,6 +319,16 @@ input.foto{
 
     .ocultar-mobile{
         display: block;
+    }
+    .burger-menu{
+        display: none;}
+     /*---- Form buscar --------*/ 
+    header .form input{
+        height: 30px;
+        width: 200px
+    }
+    header .form button{
+        height: 30px;
     }
 }
 
