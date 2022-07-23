@@ -14,106 +14,7 @@ p{
     font-size: 12px;
 }
 
-header{
-    background-color:  #FFF;
-    /*display: flex;*/
-}
 
-.top-header{
-    padding: 5%;
-    display: flex;
-    /*flex-direction: row;*/
-    justify-content: space-between;
-    align-items: center;
-    height: 20vh;
-}
-
-#logo{
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-}
-/*------------ form buscar----------------*/
-header .form {
-    width: 65%;
-    max-width: 280px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-}
-header .form input{
-    border-radius: 8px 0 0 8px;
-    border: solid 1px black;
-    border-right: none;
-    height: 25px;
-    width: 130px
-}
-header .form button{
-    border-radius: 0 8px 8px 0;
-    border: solid 1px black;
-    border-left: none;
-    height: 25px;
-    background-color: #FFF;
-}
-
-div.burger-menu{
-    text-align: center;
-    padding: 10px 0px 20px 0px;
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-}
-
-div.burger-menu i{
-    background-color:  #F5F5F5;
-    border-radius: 5px;
-    color:#000;
-    font-size: 10px;
-    padding: 10px;
-}
-
-header div.top-header p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-
-header div i{
-    padding: 5px;
-}
-
-header nav{
-
-    font-size: 12px;
-    display: none;
-    border-color: black;
-    background-color: black;
-    
-}
-
-header nav ul{
-    display:flex;
-    flex:wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 35px;
-    height:4.5em;
-}
-
-header ul li{
-    list-style-type: none;
-    
-}
-
-header ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-}
 
 
 section.banner div{
@@ -134,19 +35,13 @@ section.banner div p{
 section.banner div img{
     width: 100%;
 }
-
-
 main{
     width: 90%;
     margin: 0 auto;
 }
-
 h3{
     color: #666;
 }
-
-
-
 .ocultar-mobile{
     display:none
 }
@@ -259,18 +154,6 @@ input.foto{
         display: block;
     }
 
-    div.burger-menu{
-        display: none;
-    }
-
-    header nav{
-        display: block;  
-    }
-
-    .clase-iconos-header{
-        display: block;
-    }
-
    .products{
        display:flex;
        flex-wrap: wrap;
@@ -289,16 +172,6 @@ input.foto{
 
     .ocultar-mobile{
         display: block;
-    }
-    .burger-menu{
-        display: none;}
-     /*---- Form buscar --------*/ 
-    header .form input{
-        height: 30px;
-        width: 200px
-    }
-    header .form button{
-        height: 30px;
     }
 }
 
