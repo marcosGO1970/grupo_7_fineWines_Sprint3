@@ -14,8 +14,10 @@ app.set('views', path.join(__dirname, 'views'))
 //y otra a /users que es al userRouter.js
 const mainRouter = require('./routes/mainRouter.js')
 const userRouter = require('./routes/userRouter.js')
+const productsRouter = require('./routes/productsRouter.js'); // Rutas /products
 app.use('/', mainRouter)
 app.use('/user', userRouter)
+app.use('/products', productsRouter);
 
 const port = 3000
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
