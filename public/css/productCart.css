@@ -124,6 +124,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 .contenedor-img{
     align-self: center;
@@ -132,7 +133,7 @@ h1{
 }
 .descripcion{
     font-size: 12px;
-    width: 15%;
+    width: 18%;
     margin-left: 5px;
     border-right: 1px;
 
@@ -317,7 +318,7 @@ article i{
     }  
 /*------MAIN---------*/
     .descripcion{
-        font-size: 15px;
+        font-size: 18px;
         margin: auto;
     }
     .precio{
