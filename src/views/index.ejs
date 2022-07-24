@@ -8,42 +8,8 @@
     <title>FINE WINES - HOME</title>
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <figure>
-                <img src="/images/Logo.png" alt="Logo FINE WINES" id="logo">
-            </figure>
-            <form class="form" action="#" method="GET">
-                <input type="text" name="search" placeholder="  Buscar productos, marcas y más">
-                <button type="submit"> <i class="fa fa-search"></i></button>
-            </form>
-
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-            <div class="clase-iconos-header">
-                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-                <i class="fa-brands fa-instagram"></i>
-                <a href="/user/login"><i class="fa-solid fa-user-large"></i></a>
-
-            </div>
-        </div>
-        <!--al abrir menu de hamburguesa se despliega lo siguiente-->
-       <nav>
-            <ul>
-                <li><a href="#">BODEGAS</a></li>
-                <li><a href="#">TINTOS</a></li>
-                <li><a href="#">BLANCOS</a></li>
-                <li><a href="#">ROSADOS</a></li>
-                <li><a href="#">ESPUMANTES</a></li>
-            </ul>
-            <!--<ul>
-                <li><a href="#">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="#">Mis Compras <i class="fas fa-shopping-basket"></i></a></li>
-            </ul>-->
-        </nav>
-    </header>
+    <!--Incluyo el partial header-->
+    <%- include('./partials/header.ejs') %>
     <section class="banner">
         <div>
             <img src="/images/portada.jpg" alt="Banner principal">
