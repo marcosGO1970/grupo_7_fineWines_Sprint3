@@ -1,3 +1,5 @@
+/*HEADER*/
+
 header{
     background-color:  #FFF;
 }
@@ -106,4 +108,41 @@ header ul li a{
     }
     .burger-menu{
         display: none;}
+}
+
+/* FOOTER*/
+
+/* Estilos del footer */
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   text-align: center;
+   background-color: black;
+}
+footer .fa-instagram:before {
+    background-color: black;
+    color: white;
+  }
+footer section i{   
+    margin-top: 10px;
+    background-color: white;
+}
+
+footer section h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+footer section p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    margin-bottom:15px;
+}
+
+footer h2{
+    padding: 20px;
 }
