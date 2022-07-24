@@ -56,22 +56,24 @@
             <span>Basado en tu última visita</span>
             </div>
             <div class="products">
-                <% products.forEach(product => {%>
+                <% products.forEach(product => {if(product.visitado == true){%>
                     <article class="articulo">
-                        <a href="/productDetail/<%= product.id %>"><img src="/images/<%= product.image %>" class="product_img" alt="Angelica Zapata Malbec"></a>
+                        <a href="/productDetail/<%= product.id %>"><img src="/images/<%= product.image %>" class="product_img"></a>
                         <div class="detalle">
                             <div class="price-and-discount">
-                                <p class="price"><%= product.price %>"</p>
-                                <p class="discount"><%= product.descuento %>"</p>
+                                <p class="price"><%= product.price %></p>
+                                <% if(product.descuento > 0){%>
+                                <p class="discount"><%= -product.descuento*100 + '% OFF' %></p>
+                                <%}%>
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                                 <div>
-                                    <h4 class="bodega"><%= product.bodega %>"</h4>
-                                    <h5 class="varietal"><%= product.varietal %>"</h5>
+                                    <h4 class="bodega"><%= product.bodega %></h4>
+                                    <h5 class="varietal"><%= product.varietal %></h5>
                                 </div>
                         </div>
                     </article>
-                <%}) %>
+                <%}}) %>
             </div>
                   
         </section>
@@ -81,62 +83,22 @@
             <span>Ofertas</span>
             </div>
             <div class="products">
-                <article class="articulo">
-                    <img src="/images/DV-CATENA-MALBEC-MALBEC.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$3.500</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                            <div>
-                                <h4 class="bodega">DV Catena</h4>
-                                <h5 class="varietal">Malbec Malbec</h5>
+                <% products.forEach(product => { if(product.descuento > 0){%>
+                    <article class="articulo">
+                        <a href="/productDetail/<%= product.id %>"><img src="/images/<%= product.image %>" class="product_img"></a>
+                        <div class="detalle">
+                            <div class="price-and-discount">
+                                <p class="price"><%= product.price %></p>
+                                <p class="discount"><%= -product.descuento*100 + ' % OFF' %></p>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/Escorihuela Gascon Gran Reserva Chardonnay.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$2.100</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
+                                <div>
+                                    <h4 class="bodega"><%= product.bodega %></h4>
+                                    <h5 class="varietal"><%= product.varietal %></h5>
+                                </div>
                         </div>
-                            <div>
-                                <h4 class="bodega">Escorihuela Gascon</h4>
-                                <h5 class="varietal">Gran Reserva Chardonnay</h5>
-                            </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/Escorihuela Gascon Gran Reserva Malbec.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$1.500</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                            <div>
-                                <h4 class="bodega">Escorihuela Gascon</h4>
-                                <h5 class="varietal">Gran Reserva Malbec</h5>
-                            </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/images/Escorihuela Gascón Malbec Full.jpg" class="product_img" alt="Angelica Zapata Malbec">
-                    <div class="detalle">
-                        <div class="price-and-discount">
-                            <p class="price">$3.500</p>
-                            <p class="discount">20% OFF</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                            <div>
-                                <h4 class="bodega">Escorihuela Gascon</h4>
-                                <h5 class="varietal">Malbec Full</h5>
-                            </div>
-                    </div>
-                </article>
+                    </article>
+                <%}}) %>
             </div>               
         </section>
     </main>
