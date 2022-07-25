@@ -393,7 +393,6 @@ footer{
     .main-header-top-bar{
         align-items: center;}
     .main-navbar{
-        margin-top: 20px;
         justify-content: space-between;
     }
     .main-navbar li{

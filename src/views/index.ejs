@@ -29,7 +29,7 @@
                             <div class="price-and-discount">
                                 <p class="price"><%= product.price %></p>
                                 <% if(product.descuento > 0){%>
-                                <p class="discount"><%= -product.descuento*100 + '% OFF' %></p>
+                                <p class="discount"><%= product.descuento*100 + '% OFF' %></p>
                                 <%}%>
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
@@ -55,7 +55,7 @@
                         <div class="detalle">
                             <div class="price-and-discount">
                                 <p class="price"><%= product.price %></p>
-                                <p class="discount"><%= -product.descuento*100 + ' % OFF' %></p>
+                                <p class="discount"><%= product.descuento*100 + '% OFF' %></p>
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                                 <div>
