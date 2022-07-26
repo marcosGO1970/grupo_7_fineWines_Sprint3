@@ -1,59 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <script src="https://kit.fontawesome.com/7f28056c4e.js" crossorigin="anonymous"></script>
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/partials.css">
     <link rel="stylesheet" href="/css/productDetail.css">
     <title>Detalle de Producto</title>
 </head>
 
 <body>
-    <header>
-        <div class="top-header">
-            <figure>
-                <img src="/images/Logo.png" alt="Logo FINE WINES" id="logo">
-            </figure>
 
-            <form id="buscador" action="#" method="GET">
-                <input id="inputBuscador" type="text" name="search" placeholder="  Buscar productos, marcas y más">
-                <button id="submit" type="submit">
-                <i class="fa fa-search"></i></button> 
-                <!--<div id="inputBuscador">Buscar productos</div>
-                <div id="submit"><i class="fa fa-search"></i></div>-->
-                </form>
-
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-            <a href="/" ><i class="fa-solid fa-house"></i></a>
-            <div class="clase-iconos-header">
-                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-solid fa-user-large"></i>
-            </div>
-        </div>
-        <!--nav-->
-       <nav>
-            <ul>
-                <li><a href="#">BODEGAS</a></li>
-                <li><a href="#">TINTOS</a></li>
-                <li><a href="#">BLANCOS</a></li>
-                <li><a href="#">ROSADOS</a></li>
-                <li><a href="#">ESPUMANTES</a></li>
-            </ul>
-            <!--<ul>
-                <li><a href="#">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="#">Mis Compras <i class="fas fa-shopping-basket"></i></a></li>
-            </ul>-->
-        </nav>
-        
-    </header>
+    <%- include('./partials/header.ejs') %>
+  
     <section class="banner">
         <div class="portada">
             <img src="/images/portada.jpg" alt="Banner principal">
@@ -62,58 +19,10 @@
     </section>
     
     <main>
-        <section class="last-visit">
-            <h3>Bressia Piel Negra Pinot Noir 750</h3>
-            <div class="products">
-                
-                <article>
-                    <div class="imagen">
-                        <img class="zoom"src="/images/<%= product.image %> " class="product_img" width="250px" alt="vino bressia">
-                    </div>
-                    <div class="main-article">
-                         <div class="description1">
-                            <p class="description2"><%= product.description %> </p>
-                        </div>
-                    </div>
-                    
-                </article>
-                <article>
-                <div class="tipo-vino">
-                    <div class="tipo-vino1">
-                       <ul class="lista-vino">
-                        <li class="detalle-lista"><%= product.varietal %></li>
-                        <li class="detalle-lista"><%= product.bodega %></li>
-                       </ul>
-                    </div>
-                    <div class="miscelanea">
-                        <p class="miscelanea1">Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Envíos a CABA y GBA con nuestra propia flota, siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.</p>
-                    </div>
-                </div>
-                </article>
-                <article>
-                    <div class="caja-carrito">
-                        <div class="precio-descuento">
-                            <p class="precio">$ <%= product.price %></p>
-                            <p class="descuento"><%= product.descuento*100 %> % OFF</p>
-                        </div>
-                        <div class="carrito">
-                            <label class="cantidad">Cantidad:</label>
-                            <select class="cantidad1">
-                                <option value="1"> 1</option>
-                                <option value="2"> 2 unidades</option>
-                                <option value="3"> 3 unidades</option>
-                                <option value="4"> 4 unidades</option>
-                            </select>
-                            <button class="comprar"type="submit"><i class="fas fa-shopping-basket"></i>Comprar</button>
-                        </div>
-                        </div>
-                    </article>
-                  
-            </div>  
-                    
-        </section>
+        <%- include('./partials/product.ejs')  %> 
 
     </main>
+    <br>
 
     <footer>
         <%- include('./partials/footer.ejs') %>
