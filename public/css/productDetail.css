@@ -11,123 +11,7 @@ p{
     font-size: 12px;
 }
 
-header{
-    background-color:  #FFF;
-    /*display: flex;*/
-}
 
-.top-header{
-    padding: 5%;
-    display: flex;
-    /*flex-direction: row;*/
-    justify-content: space-between;
-    align-items: center;
-    height: 20vh;
-}
-
-#logo{
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-}
-
-/* ----- Form buscar -----------*/
-#buscador{
-    font-size: 12px;
-    padding: 2px;
-    flex-grow: 0.4;
-    border: 1px solid black;
-    border-radius: 10px;
-    color: #666;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 15px;
-}
-
-#inputBuscador{
-    display: inline-block;
-    font-size: 12px;
-    padding: 2px;
-    width: 70%;
-    outline: none;
-    color: #666;
-    border: none
-}
-
-#submit{
-    display: inline-block;
-    font-size: 12px;
-    padding: 2px;
-    text-align: right;
-    color: #000;
-    font-weight: bold;
-    background-color: #FFF;
-    width: 12%;
-    border: none;
-}
-
-div.burger-menu{
-    text-align: center;
-    margin: auto;
-    padding: 10px 0px 20px 0px;
-    width: 40px;
-    height: 40px;
-}
-
-div.burger-menu i{
-    background-color:  #F5F5F5;
-    border-radius: 5px;
-    color:#000;
-    font-size: 10px;
-    padding: 10px;
-}
-
-header div.top-header p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.clase-iconos-header{
-    display:flex;
-    align-items: center;
-    justify-content: right;
-    display: none;
-}
-
-header div i{
-    padding: 5px;
-}
-
-header nav{
-
-    font-size: 12px;
-    display: none;
-    border-color: black;
-    background-color: black;
-  
-}
-
-header nav ul{
-    display:flex;
-    flex:wrap;
-    justify-content: space-around;
-    align-items: center;
-    height:7vh;
-}
-
-header ul li{
-    list-style-type: none;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-}
 section.banner div{
     width: 100%;
     position: relative;
@@ -247,42 +131,12 @@ ul{
 
 }
 
-/*footer{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   text-align: center;
-   background-color: black;
-   margin: 15px 0px;
-   margin-bottom: 10px;
-}
 
-footer section i{   
-    margin-top: 10px;
-    background-color: white;
-}
-
-footer section h2{
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    margin-top: 15px;
-}
-
-footer section p{
-    margin-top: 10px;
-    font-size: 12px;
-    color: white;
-    margin-bottom:15px;
-}*/
-
-.ocultar-mobile{
-    display:none
-}
 @media (min-width: 768px) {
     main section article img{
-        width: 50%;
+        width: 30%;
         float:left;
+        max-height: 500px;
     }
     .main-article{
         width: 50%;
