@@ -19,5 +19,5 @@ app.use('/', mainRouter)
 app.use('/user', userRouter)
 app.use('/products', productsRouter);
 
-const port = 3000
+const port = process.env.PORT || 3030;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
