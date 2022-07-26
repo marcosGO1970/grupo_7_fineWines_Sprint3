@@ -38,9 +38,7 @@ main{
 main section h3{
     margin: 20px 0px;
 }
-main section article img{
-    width: 100%;
-}
+
 /*
 .zoom{
      transition: transform .2s;
@@ -134,7 +132,7 @@ ul{
 
 @media (min-width: 768px) {
     main section article img{
-        width: 30%;
+       max-width: 30%;
         float:left;
         max-height: 500px;
     }
